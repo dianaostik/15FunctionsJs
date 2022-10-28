@@ -113,7 +113,7 @@ let tagsP = 0;
 dokum(tagsP);
 
 function dokum(rndTags) {
-    for (let z = 0; z < 10; z++) {
+    for (let z = 0; z < 9; z++) {
         rndTags = 1 + Math.round(Math.random() * 9 ); 
         tagsP += " <p> " + rndTags + " </p> ";
     }
@@ -130,19 +130,24 @@ console.log("----------- 1 uzduotis -------------");
 let kint1 = 2;
 let kint2 = 3;
 
-// laipsnis(kint1,kint2);
-
 function laipsnis(num, pow) {
     if (pow == 0) {
         return 1;
     }
     let laipsnis = num;
     for (let u = 0; u < pow -1; u++) {  
-       laipsnis *= num;  
-    }     
+       laipsnis *= num; 
+       
+    }    
+    // document.getElementById("laipsniukai").innerHTML = laipsnis(); 
     return laipsnis;
+    
 }
 
 console.log(laipsnis(kint1,kint2)); 
-console.log(laipsnis(kint1,1)); 
-console.log(laipsnis(kint1,0)); 
+// console.log(laipsnis(kint1,1)); 
+// console.log(laipsnis(kint1,0)); 
+
+
+
+
