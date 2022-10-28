@@ -8,7 +8,7 @@ let sk2 = 6;
 sum(sk1, sk2);
 
 function sum(a, b) {
-    console.log(a * b);   
+    console.log(a * b);
 }
 
 
@@ -21,7 +21,7 @@ let vardas = "Petras";
 sayHiTo(vardas);
 
 function sayHiTo(name) {
-    console.log("Labas " + name);   
+    console.log("Labas " + name);
 }
 
 
@@ -47,7 +47,7 @@ console.log("----------- 4 uzduotis -------------");
 let vard = "jonas";
 let pavarde = "petrauskas";
 
-rezult(vard,pavarde);
+rezult(vard, pavarde);
 
 function rezult(c, d) {
     console.log(c[0].toUpperCase() + d[0].toUpperCase());
@@ -77,10 +77,10 @@ let rndNumbers = 0;
 rndNum(rndNumbers);
 
 function rndNum(f) {
-   for (let e = 0; e < 3; e++) {
-    f = Math.round(Math.random() * 5 );  
-    rndNumbers += f + ",";
-} 
+    for (let e = 0; e < 3; e++) {
+        f = Math.round(Math.random() * 5);
+        rndNumbers += f + ",";
+    }
 }
 console.log(rndNumbers.slice(0, -1));
 
@@ -96,12 +96,12 @@ let iki = 20;
 
 function nuoIki(min, max) {
     if (min < max) {
-        let w = min + Math.round(  Math.random() * (max-min)); 
+        let w = min + Math.round(Math.random() * (max - min));
         return w;
-    }   
+    }
 }
 
-console.log(nuoIki(nuo, iki)); 
+console.log(nuoIki(nuo, iki));
 
 
 
@@ -114,7 +114,7 @@ dokum(tagsP);
 
 function dokum(rndTags) {
     for (let z = 0; z < 9; z++) {
-        rndTags = 1 + Math.round(Math.random() * 9 ); 
+        rndTags = 1 + Math.round(Math.random() * 9);
         tagsP += " <p> " + rndTags + " </p> ";
     }
     document.getElementById("sequence").innerHTML = tagsP;
@@ -124,10 +124,10 @@ function dokum(rndTags) {
 
 
 //----- Vidutiniai
-//1 uzduotis
-console.log("----------- 1 uzduotis -------------");
+//1 ir 2 uzduotis
+console.log("----------- 1 ir 2 uzduotis -------------");
 
-let kint1 = 2;
+let kint1 = 3;
 let kint2 = 3;
 
 function laipsnis(num, pow) {
@@ -135,19 +135,29 @@ function laipsnis(num, pow) {
         return 1;
     }
     let laipsnis = num;
-    for (let u = 0; u < pow -1; u++) {  
-       laipsnis *= num; 
-       
-    }    
-    // document.getElementById("laipsniukai").innerHTML = laipsnis(); 
+    for (let u = 0; u < pow - 1; u++) {
+        laipsnis *= num;
+    }
     return laipsnis;
-    
 }
-
-console.log(laipsnis(kint1,kint2)); 
+document.getElementById("laipsniukai").innerHTML = laipsnis(kint1, kint2);
+console.log(laipsnis(kint1, kint2));
 // console.log(laipsnis(kint1,1)); 
 // console.log(laipsnis(kint1,0)); 
 
 
+//----- Sunkesni
+//1 ir 2 uzduotis
+console.log("----------- 1 ir 2 uzduotis -------------");
+
+let textH1 = "Programavimas";
+
+dokSuH1(textH1,1);
+
+function dokSuH1(kazkas,tag) {
+    textH1 = " <h" + tag + "> " + kazkas + " " + "</h" + tag + "> ";
+    console.log("<h"+tag+">");
+    document.getElementById("programming").innerHTML = textH1;
+}
 
 
