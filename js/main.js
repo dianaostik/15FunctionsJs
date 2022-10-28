@@ -70,6 +70,17 @@ function dokumentas(y) {
 
 
 
-//6 uzduotis
+//7 uzduotis
 console.log("----------- 6 uzduotis -------------");
+
+let rndNumbers = 0;
+rndNum(rndNumbers);
+
+function rndNum(f) {
+   for (let e = 0; e < 3; e++) {
+    f = Math.round(Math.random() * 5 );  
+    rndNumbers += f + ",";
+} 
+}
+console.log(rndNumbers.slice(0, -1));
 
