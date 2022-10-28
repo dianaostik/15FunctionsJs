@@ -71,7 +71,7 @@ function dokumentas(y) {
 
 
 //7 uzduotis
-console.log("----------- 6 uzduotis -------------");
+console.log("----------- 7 uzduotis -------------");
 
 let rndNumbers = 0;
 rndNum(rndNumbers);
@@ -83,4 +83,41 @@ function rndNum(f) {
 } 
 }
 console.log(rndNumbers.slice(0, -1));
+
+
+
+
+//8 uzduotis
+console.log("----------- 8 uzduotis -------------");
+
+let nuo = 10;
+let iki = 20;
+
+
+function nuoIki(min, max) {
+    if (min < max) {
+        let w = min + Math.round(  Math.random() * (max-min)); 
+        return w;
+    }   
+}
+
+console.log(nuoIki(nuo, iki)); 
+
+
+
+//9 uzduotis
+console.log("----------- 9 uzduotis -------------");
+
+let tagsP = 0;
+
+dokum(tagsP);
+
+function dokum(rndTags) {
+    for (let z = 0; z < 10; z++) {
+        rndTags = 1 + Math.round(Math.random() * 9 ); 
+        tagsP += " <p> " + rndTags + " </p> ";
+    }
+    document.getElementById("sequence").innerHTML = tagsP;
+}
+
 
