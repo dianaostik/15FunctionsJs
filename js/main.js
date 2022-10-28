@@ -121,3 +121,28 @@ function dokum(rndTags) {
 }
 
 
+
+
+//----- Vidutiniai
+//1 uzduotis
+console.log("----------- 1 uzduotis -------------");
+
+let kint1 = 2;
+let kint2 = 3;
+
+// laipsnis(kint1,kint2);
+
+function laipsnis(num, pow) {
+    if (pow == 0) {
+        return 1;
+    }
+    let laipsnis = num;
+    for (let u = 0; u < pow -1; u++) {  
+       laipsnis *= num;  
+    }     
+    return laipsnis;
+}
+
+console.log(laipsnis(kint1,kint2)); 
+console.log(laipsnis(kint1,1)); 
+console.log(laipsnis(kint1,0)); 
